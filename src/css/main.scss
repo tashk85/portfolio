@@ -1,0 +1,155 @@
+/* Universal Styles */
+html {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  padding-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+h4 {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
+button {
+  width: 30%;
+  font-size: 0.75rem;
+  border: 1px solid #dddddd;
+  color: black;
+  padding: 0.75rem 0 0.75rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #016fd1;
+  color: white;
+  border: 1px solid #016fd1;
+  transition: all 750ms;
+  -webkit-transition: all 750ms;
+}
+
+// Header section
+header {
+    
+}
+
+//Color Variables
+$white: #fff;
+$cream: #f4e7d7;
+$pale-blue: #a1bbd0;
+$peach: #e2b49a;
+$grey: #878c8f;
+$navy: #193446;
+
+/* Navigation menu */
+.navBar {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px $grey;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 2%;
+    }
+
+    .logo a {
+        display: block;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    ul {
+        margin-left: auto;
+        list-style-type: none;
+
+        li {
+            display: inline-flex;
+            padding-left: 20px;
+        }
+    }
+
+    a {
+        color: $navy;
+        text-decoration: none;
+        transition: all .5s ease;
+
+        &:hover {
+            color: $peach;
+        }
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.label-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+      ul {
+        a {
+          color: $navy;
+        }
+      }
+    }
+    ul {
+      background-color: $cream;
+      display: flex;
+      height: 0;
+      list-style-type: none;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      visibility: hidden;
+    }
+    
+    li {
+      border-bottom: 2px solid $navy;
+      display: block;
+      font-size: 1.5em;
+      padding: 2em 0;
+    }
+  
+    #menu-toggle:checked ~ ul {
+      opacity: 1;
+      height: 100vh;
+      visibility: visible;
+    }
+    
+    .label-toggle {
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 35px;
+      margin-top: 1em;
+      width: 35px;
+    }
+    
+    .wrapper {
+        display: block;
+    }
+}
