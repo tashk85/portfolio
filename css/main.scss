@@ -1,0 +1,234 @@
+/* Universal Styles */
+html {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+
+body {
+    width: 100%;
+    min-width: 320px;
+}
+
+ul {
+    padding: 0;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  padding-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 6rem;
+  line-height: 1.1;
+  padding-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+button {
+  width: 30%;
+  font-size: 0.75rem;
+  border: 1px solid #dddddd;
+  color: black;
+  padding: 0.75rem 0 0.75rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #016fd1;
+  color: white;
+  border: 1px solid #016fd1;
+  transition: all 750ms;
+  -webkit-transition: all 750ms;
+}
+
+//Color Variables
+$white: #fff;
+$cream: #f4e7d7;
+$pale-blue: #a1bbd0;
+$peach: #e2b49a;
+$grey: #878c8f;
+$navy: #193446;
+
+/* Navigation menu */
+.navBar {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px $grey;
+
+    .wrapper {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: flex;
+        padding: 0.375rem 0 0 1rem;
+    }
+    .logo a {
+        display: block;
+    }
+
+    .logo img {
+        width: 15rem;
+    }
+
+    ul {
+        margin: 0;
+        margin-left: auto;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            display: block;
+            padding: 20px;
+        }
+    }
+
+    a {
+        color: $navy;
+        text-decoration: none;
+        transition: all .5s ease;
+
+        &:hover {
+            color: $peach;
+        }
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.label-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+      ul {
+        a {
+          color: $navy;
+          
+          &:hover {
+              background-color: $pale-blue;
+          }
+        }
+      }
+    }
+    ul {
+      background-color: $cream;
+      position: relative;
+      top: 2px;
+      list-style-type: none;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      padding: 0;
+      visibility: hidden;
+    }
+    
+    ul:last-child {
+      border-bottom: 2px solid $navy;
+    }
+  
+    #menu-toggle:checked ~ ul {
+      opacity: 1;
+      height: 100%;
+      visibility: visible;
+      flex-direction: column;
+    }
+    
+    .label-toggle {
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 35px;
+      margin-top: 1em;
+      width: 35px;
+    }
+    
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+
+main {
+    margin-top: 50px;
+}
+
+#banner {
+    height: 100vh;
+    background: url("../images/glasses-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline-text {
+    text-align: center;
+}
+
+#about {
+    height: 100vh;
+}
+
+#work {
+    height: 100vh;
+}
+
+#contact {
+    height: 100vh;
+}
+
+footer {
+    background-color: $navy;
+    padding: 1rem 0;
+
+    p {
+        color: $white;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul li {
+        display: block;
+        padding: 0 1rem;
+        list-style-type: none;
+    }
+
+    li a {
+        color: $white;
+    }
+}

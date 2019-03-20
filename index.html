@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Natasha Khatri | Junior Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" href="./images/nk-favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header section  -->
+    <header>
+        <nav class="navBar">
+            <nav class="wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/Natasha_Khatri_Logo.png" alt="Natasha's logo" />
+                    </a>
+                </div>
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="label-toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <!-- Navigation Menu Links -->
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    
+    <!-- main content section -->
+    <main>
+        <!-- Main banner section -->
+        <section id="banner">
+            <div class="headline-text">
+                <h1>Learn Something New Everyday</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about">
+            <div class="heading">
+                <h2>About</h2>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, an quod natum scripserit per, cu hinc interesset cum. Duo illum persequeris ad, pro in ferri maiestatis, mei in illud scriptorem. Mea ad modus utroque apeirian, pri ad harum ubique.</p>
+                <div class="image-container">
+                        <img src="" alt="" />
+                </div>
+            </div>
+            <div>
+                <h3>Work History</h3>
+                <p>Para</p>
+                <h3>Study History</h3>
+                <p>Para</p>
+            </div>
+        </section>
+        
+        <!-- Portfolio work section -->
+        <section id="work">
+            <div class="heading">
+                <h2>Work</h2>
+            </div>
+            <div>
+                <div>
+                    <div class="image-container">
+                            <img src="" alt="" />
+                    </div>
+                    <div>
+                        <h3>Terminal App</h3>
+                        <h4>—Ruby, Command-Line</h4>
+                    </div>
+                </div>
+                <div>
+                    <div class="image-container">
+                            <img src="" alt="" />
+                    </div>
+                    <div>
+                        <h3>CSS Zen Garden</h3>
+                        <h4>—CSS Styling</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact section -->
+        <section id="contact">
+            <div class="heading">
+                <h2>Contact</h2>
+            </div>
+            <div>
+                <h3>Say hi!</h3>
+                <p><a href="mailto:tashk85@gmail.com">tashk85@gmail.com</a></p>
+                <button>Send Me A Message</button>
+            </div>
+            <form id="contact-form" action="mailto:tashk85@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" placeholder="Name"  required="required" autofocus="autofocus" maxlength="50" /><br />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required="required" autofocus="autofocus" maxlength="50" /><br />
+                    <label for="message">Message</label>
+                    <textarea type="textarea" name="message" placeholder="Message" required="required" autofocus="autofocus" rows="10" cols="30"></textarea><br />
+                    <button type="submit" autofocus="autofocus">SEND</button>
+                </fieldset>
+            </form>
+            
+            <!-- <div>
+                <ul>
+                    <li>Connect with me on LinkedIn</li>
+                    <li>Follow me on Twitter</li>
+                    <li>Read some blog posts on Medium</li>
+                    <li>Check out my repos on Github</li>
+                </ul>
+            </div> -->
+        </section>
+    </main>
+    
+    <!-- footer section -->
+    <footer>
+        <p>&copy; 2019 Natasha Khatri</p>
+        <ul class="social" role="presentation">
+            <li><a href="https://www.linkedin.com/in/natasha-khatri-57562442" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/tashk85" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://twitter.com/tashk85" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://medium.com/@tashk85" target="_blank"><i class="fab fa-medium-m"></i></a></li>
+          </ul>
+    </footer>
+
+    <script src="nav_toggle.js"></script>
+</body>
+</html>
