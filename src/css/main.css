@@ -9,22 +9,33 @@ body {
   min-width: 320px;
 }
 
+ul {
+  padding: 0;
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.1;
   padding-bottom: 1.25rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 6rem;
+  line-height: 1.1;
   padding-bottom: 1rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
 h4 {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  padding-bottom: 1rem;
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
 }
 
 button {
@@ -103,7 +114,7 @@ button:hover {
     color: #193446;
   }
   nav ul a:hover {
-    color: #a1bbd0;
+    background-color: #a1bbd0;
   }
 
   ul {
@@ -144,6 +155,57 @@ button:hover {
   .wrapper {
     flex-direction: column;
   }
+}
+main {
+  margin-top: 50px;
+}
+
+#banner {
+  height: 100vh;
+  background: url("../images/glasses-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline-text {
+  text-align: center;
+}
+
+#about {
+  height: 100vh;
+}
+
+#work {
+  height: 100vh;
+}
+
+#contact {
+  height: 100vh;
+}
+
+footer {
+  background-color: #193446;
+  padding: 1rem 0;
+}
+footer p {
+  color: #fff;
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  display: block;
+  padding: 0 1rem;
+  list-style-type: none;
+}
+footer li a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

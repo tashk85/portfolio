@@ -27,9 +27,9 @@
                 </label>
                 <!-- Navigation Menu Links -->
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </nav>
@@ -38,16 +38,18 @@
     <!-- main content section -->
     <main>
         <!-- Main banner section -->
-        <section>
-            <div>
+        <section id="banner">
+            <div class="headline-text">
                 <h1>Learn Something New Everyday</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </section>
 
         <!-- About section -->
-        <section>
-            <h2>About</h2>
+        <section id="about">
+            <div class="heading">
+                <h2>About</h2>
+            </div>
             <div>
                 <p>Lorem ipsum dolor sit amet, an quod natum scripserit per, cu hinc interesset cum. Duo illum persequeris ad, pro in ferri maiestatis, mei in illud scriptorem. Mea ad modus utroque apeirian, pri ad harum ubique.</p>
                 <div class="image-container">
@@ -63,8 +65,10 @@
         </section>
         
         <!-- Portfolio work section -->
-        <section>
-            <h2>Work</h2>
+        <section id="work">
+            <div class="heading">
+                <h2>Work</h2>
+            </div>
             <div>
                 <div>
                     <div class="image-container">
@@ -88,21 +92,34 @@
         </section>
         
         <!-- Contact section -->
-        <section>
-            <h2>Contact</h2>
+        <section id="contact">
+            <div class="heading">
+                <h2>Contact</h2>
+            </div>
             <div>
                 <h3>Say hi!</h3>
                 <p><a href="mailto:tashk85@gmail.com">tashk85@gmail.com</a></p>
                 <button>Send Me A Message</button>
             </div>
-            <div>
+            <form id="contact-form" action="mailto:tashk85@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" placeholder="Name"  required="required" autofocus="autofocus" maxlength="50" /><br />
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required="required" autofocus="autofocus" maxlength="50" /><br />
+                    <label for="message">Message</label>
+                    <textarea type="textarea" name="message" placeholder="Message" required="required" autofocus="autofocus" rows="10" cols="30"></textarea><br />
+                    <button type="submit" autofocus="autofocus">SEND</button>
+                </fieldset>
+            </form>
+            
+            <!-- <div>
                 <ul>
                     <li>Connect with me on LinkedIn</li>
                     <li>Follow me on Twitter</li>
                     <li>Read some blog posts on Medium</li>
                     <li>Check out my repos on Github</li>
                 </ul>
-            </div>
+            </div> -->
         </section>
     </main>
     
@@ -116,5 +133,7 @@
             <li><a href="https://medium.com/@tashk85" target="_blank"><i class="fab fa-medium-m"></i></a></li>
           </ul>
     </footer>
+
+    <script src="nav_toggle.js"></script>
 </body>
 </html>
