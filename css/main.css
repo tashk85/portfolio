@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Unna:400i,700");
 /* Universal Styles */
 html {
-  font-family: Arial, sans-serif;
+  font-family: "Source Sans Pro", Verdana, sans-serif;
   font-size: 16px;
 }
 
@@ -11,6 +12,11 @@ body {
 
 ul {
   padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Unna", serif;
+  font-weight: 700;
 }
 
 h1 {
@@ -109,6 +115,7 @@ button:hover {
   display: none;
 }
 
+/* Navigation menu */
 @media screen and (max-width: 768px) {
   nav ul a {
     color: #193446;
@@ -156,15 +163,25 @@ button:hover {
     flex-direction: column;
   }
 }
-main {
-  margin-top: 50px;
+/* main tag styling to avoid hiding headings under nav menu */
+main :target::before {
+  content: "";
+  display: block;
+  height: 50px;
+  /* fixed header height*/
+  margin: -50px 0 0;
+  /* negative fixed header height */
+}
+
+#about, #work, #contact {
+  padding: 0 35px;
 }
 
 #banner {
   height: 100vh;
-  background: url("../images/glasses-bg.png");
+  background: url("../images/amazing-animals-avian-1921336.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -173,6 +190,7 @@ main {
 
 .headline-text {
   text-align: center;
+  color: #fff;
 }
 
 #about {
