@@ -4,6 +4,11 @@ html {
   font-size: 16px;
 }
 
+body {
+  width: 100%;
+  min-width: 320px;
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 800;
@@ -46,29 +51,35 @@ button:hover {
   background-color: #fff;
   position: fixed;
   top: 0;
+  z-index: 6;
   width: 100%;
   height: 50px;
   border-bottom: solid 1px #878c8f;
 }
 .navBar .wrapper {
   display: flex;
-  align-items: center;
   margin: 0 auto;
-  padding: 0 2%;
+}
+.navBar .logo {
+  display: flex;
+  padding: 0.375rem 0 0 1rem;
 }
 .navBar .logo a {
   display: block;
 }
 .navBar .logo img {
-  width: 250px;
+  width: 15rem;
 }
 .navBar ul {
+  margin: 0;
   margin-left: auto;
   list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
 }
 .navBar ul li {
-  display: inline-flex;
-  padding-left: 20px;
+  display: block;
+  padding: 20px;
 }
 .navBar a {
   color: #193446;
@@ -91,43 +102,47 @@ button:hover {
   nav ul a {
     color: #193446;
   }
+  nav ul a:hover {
+    color: #a1bbd0;
+  }
 
   ul {
     background-color: #f4e7d7;
-    display: flex;
-    height: 0;
+    position: relative;
+    top: 2px;
     list-style-type: none;
     opacity: 0;
     text-align: center;
     transition: all 1s ease;
     width: 100%;
+    padding: 0;
     visibility: hidden;
   }
 
-  li {
+  ul:last-child {
     border-bottom: 2px solid #193446;
-    display: block;
-    font-size: 1.5em;
-    padding: 2em 0;
   }
 
   #menu-toggle:checked ~ ul {
     opacity: 1;
-    height: 100vh;
+    height: 100%;
     visibility: visible;
+    flex-direction: column;
   }
 
   .label-toggle {
     cursor: pointer;
     display: block;
-    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
     height: 35px;
     margin-top: 1em;
     width: 35px;
   }
 
   .wrapper {
-    display: block;
+    flex-direction: column;
   }
 }
 
