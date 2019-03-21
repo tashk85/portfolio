@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Italiana|Nanum+Gothic:400,700');
 
 /*Color Variables*/
-$white: #f8f8f5;
-$cream: #f4e7d7;
-$pale-blue: #a1bbd0;
-$peach: #e2b49a;
-$grey: #878c8f;
-$navy: #193446;
+$white: #F8F8F5;
+$cream: #F4E7D7;
+$icing: #DAE9E4;
+$bora-blue: #8BCBC8;
+$melon: #FDAE84;
+$sakura: #ECC7C0;
+$cranberry: #3C2E3D;
 
 /************** Universal Styles **************/
 html {
@@ -18,7 +19,7 @@ html {
 body {
     width: 100%;
     min-width: 320px;
-    background-color: $cream;
+    background-color: $cranberry;
 }
 
 ul {
@@ -45,21 +46,21 @@ h2 {
   font-size: 2rem;
   line-height: 1.1;
   padding-bottom: 1rem;
-  color: $navy;
+  color: $cranberry;
 }
 
 h3 {
     font-size: 1.5rem;
     line-height: 1.8;
     margin: 0;
-    color: $navy;
+    color: $cranberry;
 }
 
 h4 {
     font-size: 1rem;
     margin: 0;
     font-style: italic;
-    color: $navy;
+    color: $cranberry;
 }
 
 p {
@@ -94,8 +95,8 @@ p {
 .button {
     width: 30%;
     font-size: 0.75rem;
-    border: 2px solid $navy;
-    color: $navy;
+    border: 2px solid $cranberry;
+    color: $cranberry;
     padding: 0.75rem 1.6rem;
     text-decoration: none;
     text-align: center;
@@ -103,9 +104,8 @@ p {
     cursor: pointer;
 
     &:hover {
-        background-color: $navy;
+        background-color: $cranberry;
         color: white;
-        border-bottom: 2px solid $pale-blue;
         transition: all 750ms;
         -webkit-transition: all 750ms;
     }
@@ -121,7 +121,7 @@ p {
     z-index: 6;
     width: 100%;
     height: 50px;
-    border-bottom: solid 1px $grey;
+    border-bottom: solid 1px $cranberry;
 
     .wrapper {
         display: flex;
@@ -154,12 +154,12 @@ p {
     }
 
     a {
-        color: $navy;
+        color: $cranberry;
         text-decoration: none;
         transition: all .5s ease;
 
         &:hover {
-            color: $peach;
+            color: $melon;
         }
     }
 }
@@ -188,14 +188,14 @@ p {
         visibility: hidden;
 
         &:last-child {
-            border-bottom: 2px solid $navy;
+            border-bottom: 2px solid $cranberry;
           }
 
         a {
-          color: $navy;
+          color: $cranberry;
           
           &:hover {
-              background-color: $pale-blue;
+              background-color: $melon;
           }
         }
       }
@@ -238,6 +238,8 @@ main {
 
 #about, #work, #contact {
     padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -266,12 +268,16 @@ main {
 /************** about section **************/
 #about {
     height: 100vh;
+    background-color: $melon;
+
+    h3 {
+        padding-top: 2rem;
+    }
 }
 
 /************** work section **************/
 #work {
-
-    background-color: $pale-blue;
+    background-color: $sakura;
 
     .works-container {
         margin: 0 auto;
@@ -299,7 +305,7 @@ main {
     width: 100%;
 
     p {
-        color: $navy;
+        color: $cranberry;
         font-style: italic;
     }
 }
@@ -362,12 +368,11 @@ main {
 
 /************** contact section **************/
 #contact {
-    // height: 100vh;
+    background-color: $bora-blue;
 }
 
 /************** footer styling **************/
 footer {
-    background-color: $navy;
     padding: 1rem 0;
 
     p {
@@ -390,7 +395,8 @@ footer {
         color: $white;
 
         &:hover {
-            color: $pale-blue;
+            color: $melon;
+            transition: all .5s ease;
         }
     }
 }

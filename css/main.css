@@ -10,7 +10,7 @@ html {
 body {
   width: 100%;
   min-width: 320px;
-  background-color: #f4e7d7;
+  background-color: #3C2E3D;
 }
 
 ul {
@@ -37,21 +37,21 @@ h2 {
   font-size: 2rem;
   line-height: 1.1;
   padding-bottom: 1rem;
-  color: #193446;
+  color: #3C2E3D;
 }
 
 h3 {
   font-size: 1.5rem;
   line-height: 1.8;
   margin: 0;
-  color: #193446;
+  color: #3C2E3D;
 }
 
 h4 {
   font-size: 1rem;
   margin: 0;
   font-style: italic;
-  color: #193446;
+  color: #3C2E3D;
 }
 
 p {
@@ -83,8 +83,8 @@ p {
 .button {
   width: 30%;
   font-size: 0.75rem;
-  border: 2px solid #193446;
-  color: #193446;
+  border: 2px solid #3C2E3D;
+  color: #3C2E3D;
   padding: 0.75rem 1.6rem;
   text-decoration: none;
   text-align: center;
@@ -92,22 +92,21 @@ p {
   cursor: pointer;
 }
 .button:hover {
-  background-color: #193446;
+  background-color: #3C2E3D;
   color: white;
-  border-bottom: 2px solid #a1bbd0;
   transition: all 750ms;
   -webkit-transition: all 750ms;
 }
 
 /************** Navigation menu **************/
 .navBar {
-  background-color: #f4e7d7;
+  background-color: #F4E7D7;
   position: fixed;
   top: 0;
   z-index: 6;
   width: 100%;
   height: 50px;
-  border-bottom: solid 1px #878c8f;
+  border-bottom: solid 1px #3C2E3D;
 }
 .navBar .wrapper {
   display: flex;
@@ -135,12 +134,12 @@ p {
   padding: 20px;
 }
 .navBar a {
-  color: #193446;
+  color: #3C2E3D;
   text-decoration: none;
   transition: all 0.5s ease;
 }
 .navBar a:hover {
-  color: #e2b49a;
+  color: #FDAE84;
 }
 
 #menu-toggle {
@@ -154,7 +153,7 @@ p {
 /* Navigation menu for screens up to 768px wide */
 @media screen and (max-width: 768px) {
   nav ul {
-    background-color: #f4e7d7;
+    background-color: #F4E7D7;
     position: relative;
     top: 2px;
     list-style-type: none;
@@ -166,13 +165,13 @@ p {
     visibility: hidden;
   }
   nav ul:last-child {
-    border-bottom: 2px solid #193446;
+    border-bottom: 2px solid #3C2E3D;
   }
   nav ul a {
-    color: #193446;
+    color: #3C2E3D;
   }
   nav ul a:hover {
-    background-color: #a1bbd0;
+    background-color: #FDAE84;
   }
 
   #menu-toggle:checked ~ ul {
@@ -210,6 +209,8 @@ main :target::before {
 
 #about, #work, #contact {
   padding: 1.5rem;
+  border-radius: 15px;
+  margin: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -231,17 +232,21 @@ main :target::before {
 
 .headline-text {
   text-align: center;
-  color: #f8f8f5;
+  color: #F8F8F5;
 }
 
 /************** about section **************/
 #about {
   height: 100vh;
+  background-color: #FDAE84;
+}
+#about h3 {
+  padding-top: 2rem;
 }
 
 /************** work section **************/
 #work {
-  background-color: #a1bbd0;
+  background-color: #ECC7C0;
 }
 #work .works-container {
   margin: 0 auto;
@@ -267,7 +272,7 @@ main :target::before {
   width: 100%;
 }
 .works-overlay p {
-  color: #193446;
+  color: #3C2E3D;
   font-style: italic;
 }
 
@@ -314,13 +319,16 @@ main :target::before {
 }
 
 /************** contact section **************/
+#contact {
+  background-color: #8BCBC8;
+}
+
 /************** footer styling **************/
 footer {
-  background-color: #193446;
   padding: 1rem 0;
 }
 footer p {
-  color: #f8f8f5;
+  color: #F8F8F5;
   text-align: center;
 }
 footer ul {
@@ -333,10 +341,11 @@ footer ul li {
   list-style-type: none;
 }
 footer .social li a {
-  color: #f8f8f5;
+  color: #F8F8F5;
 }
 footer .social li a:hover {
-  color: #a1bbd0;
+  color: #FDAE84;
+  transition: all 0.5s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
