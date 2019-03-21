@@ -68,18 +68,18 @@ h4 {
   max-width: 100%;
 }
 
-button {
+.button {
   width: 30%;
   font-size: 0.75rem;
   border: 1px solid #878c8f;
   color: black;
-  padding: 0.75rem 0 0.75rem 0;
+  padding: 0.75rem;
+  text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
 }
-
-button:hover {
+.button:hover {
   background-color: #a1bbd0;
   color: white;
   border: 1px solid #a1bbd0;
@@ -243,37 +243,30 @@ main :target::before {
   max-width: 100%;
   padding: 0 4px;
 }
-#work .works-column .image-container {
+#work .works-column a {
   display: block;
-  width: 100%;
-  height: auto;
-}
-#work .works-column .works-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #193446;
-  background: #1934467b;
-  /* Black see-through */
-  color: #f4e7d7;
-  width: 100%;
-  transition: 0.5s ease;
-  opacity: 0;
-  color: #fff;
-  text-align: center;
-}
-#work .works-column:hover .works-overlay {
-  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
   .works-column {
     flex: 50%;
     max-width: 50%;
-    padding: 0 4px;
   }
 }
+/****** works project pages *******/
+.head-image {
+  height: 20rem;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.head-image.hangman {
+  background: url("../images/hangman_terminal_app.png");
+}
+.head-image.css_zen {
+  background: url("../images/css_zen_home.png");
+}
+
 /************** contact section **************/
 /************** footer styling **************/
 footer {
