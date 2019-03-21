@@ -81,7 +81,7 @@ p {
 }
 
 .button {
-  width: 30%;
+  display: inline-block;
   font-size: 0.75rem;
   border: 2px solid #3C2E3D;
   color: #3C2E3D;
@@ -94,8 +94,9 @@ p {
 .button:hover {
   background-color: #3C2E3D;
   color: white;
-  transition: all 750ms;
-  -webkit-transition: all 750ms;
+  transition: all 0.75s ease-in-out 0s;
+  -webkit-transition: all 0.75s ease-in-out 0s;
+  text-decoration: none;
 }
 
 /************** Navigation menu **************/
@@ -228,6 +229,7 @@ main :target::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
 }
 
 .headline-text {
@@ -235,6 +237,11 @@ main :target::before {
   color: #F8F8F5;
 }
 
+@media only screen and (min-width: 768px) {
+  #banner {
+    padding: 2.2rem;
+  }
+}
 /************** about section **************/
 #about {
   height: 100vh;
@@ -270,13 +277,14 @@ main :target::before {
 .works-overlay {
   display: block;
   width: 100%;
+  text-align: center;
 }
 .works-overlay p {
   color: #3C2E3D;
   font-style: italic;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) {
   .works-row a {
     width: 50%;
   }
@@ -284,6 +292,8 @@ main :target::before {
 /************** works project pages **************/
 .project-text, .project-images {
   padding: 1.5rem;
+  border-radius: 15px;
+  margin: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -304,6 +314,9 @@ main :target::before {
   background: url("../images/css_zen_home.png");
 }
 
+.project-text {
+  background-color: #DAE9E4;
+}
 .project-text ul {
   padding-left: 1.5rem;
 }
@@ -311,6 +324,7 @@ main :target::before {
 .project-images {
   display: flex;
   flex-wrap: wrap;
+  background-color: #ECC7C0;
 }
 .project-images .image-container {
   flex: 100%;
