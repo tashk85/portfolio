@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Unna:400i,700");
+@import url("https://fonts.googleapis.com/css?family=Italiana|Nanum+Gothic:400,700");
 /*Color Variables*/
 /************** Universal Styles **************/
 html {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,10 +17,13 @@ ul {
   padding: 0;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Unna", serif;
-  font-weight: 700;
+h1, h2, h3 {
+  font-family: "Italiana", serif;
   margin: 0;
+}
+
+h4 {
+  font-weight: 700;
 }
 
 h1 {
@@ -50,6 +54,10 @@ h4 {
   color: #193446;
 }
 
+p {
+  margin: 0;
+}
+
 /* heading sizes for screens above 768px */
 @media only screen and (min-width: 768px) {
   h1 {
@@ -68,21 +76,25 @@ h4 {
   max-width: 100%;
 }
 
+.btn-main {
+  padding: 1rem 0;
+}
+
 .button {
   width: 30%;
   font-size: 0.75rem;
-  border: 1px solid #878c8f;
-  color: black;
-  padding: 0.75rem;
+  border: 2px solid #193446;
+  color: #193446;
+  padding: 0.75rem 1.6rem;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
 }
 .button:hover {
-  background-color: #a1bbd0;
+  background-color: #193446;
   color: white;
-  border: 1px solid #a1bbd0;
+  border-bottom: 2px solid #a1bbd0;
   transition: all 750ms;
   -webkit-transition: all 750ms;
 }
@@ -219,7 +231,7 @@ main :target::before {
 
 .headline-text {
   text-align: center;
-  color: #fff;
+  color: #f8f8f5;
 }
 
 /************** about section **************/
@@ -228,32 +240,52 @@ main :target::before {
 }
 
 /************** work section **************/
+#work {
+  background-color: #a1bbd0;
+}
+#work .works-container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1rem;
+}
 #work .works-row {
   display: flex;
-  display: -ms-flexbox;
-  /* IE10 */
+  justify-content: center;
   flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  /* IE10 */
-  padding: 0 4px;
+}
+#work .works-row a {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
 }
 #work .works-column {
-  position: relative;
-  flex: 100%;
-  max-width: 100%;
-  padding: 0 4px;
+  margin: 1rem;
 }
-#work .works-column a {
+
+.works-overlay {
   display: block;
+  width: 100%;
+}
+.works-overlay p {
+  color: #193446;
+  font-style: italic;
 }
 
 @media only screen and (min-width: 768px) {
-  .works-column {
-    flex: 50%;
-    max-width: 50%;
+  .works-row a {
+    width: 50%;
   }
 }
-/****** works project pages *******/
+/************** works project pages **************/
+.project-text, .project-images {
+  padding: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-text, .project-images {
+    padding: 2.2rem;
+  }
+}
 .head-image {
   height: 20rem;
   background-size: cover;
@@ -267,6 +299,20 @@ main :target::before {
   background: url("../images/css_zen_home.png");
 }
 
+.project-text ul {
+  padding-left: 1.5rem;
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-images .image-container {
+  flex: 100%;
+  max-width: 100%;
+  padding: 0.25rem;
+}
+
 /************** contact section **************/
 /************** footer styling **************/
 footer {
@@ -274,7 +320,7 @@ footer {
   padding: 1rem 0;
 }
 footer p {
-  color: #fff;
+  color: #f8f8f5;
   text-align: center;
 }
 footer ul {
@@ -287,7 +333,7 @@ footer ul li {
   list-style-type: none;
 }
 footer .social li a {
-  color: #fff;
+  color: #f8f8f5;
 }
 footer .social li a:hover {
   color: #a1bbd0;

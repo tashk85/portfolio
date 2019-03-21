@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Unna:400i,700');
+@import url('https://fonts.googleapis.com/css?family=Italiana|Nanum+Gothic:400,700');
 
 /*Color Variables*/
-$white: #fff;
+$white: #f8f8f5;
 $cream: #f4e7d7;
 $pale-blue: #a1bbd0;
 $peach: #e2b49a;
@@ -10,8 +10,9 @@ $navy: #193446;
 
 /************** Universal Styles **************/
 html {
-    font-family: 'Source Sans Pro', Verdana, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 16px;
+    box-sizing: border-box;
   }
 
 body {
@@ -24,10 +25,13 @@ ul {
     padding: 0;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Unna', serif;
-    font-weight: 700;
+h1, h2, h3 {
+    font-family: 'Italiana', serif;
     margin: 0;
+}
+
+h4 {
+    font-weight: 700;
 }
 
 h1 {
@@ -58,6 +62,10 @@ h4 {
     color: $navy;
 }
 
+p {
+    margin: 0;
+}
+
 /* heading sizes for screens above 768px */
 @media only screen and (min-width: 768px) {
     h1 {
@@ -79,21 +87,25 @@ h4 {
     }
 }
 
+.btn-main {
+    padding: 1rem 0;
+}
+
 .button {
     width: 30%;
     font-size: 0.75rem;
-    border: 1px solid $grey;
-    color: black;
-    padding: 0.75rem;
+    border: 2px solid $navy;
+    color: $navy;
+    padding: 0.75rem 1.6rem;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
 
     &:hover {
-        background-color: $pale-blue;
+        background-color: $navy;
         color: white;
-        border: 1px solid $pale-blue;
+        border-bottom: 2px solid $pale-blue;
         transition: all 750ms;
         -webkit-transition: all 750ms;
     }
@@ -259,59 +271,62 @@ main {
 /************** work section **************/
 #work {
 
+    background-color: $pale-blue;
+
+    .works-container {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
     .works-row {
         display: flex;
-        display: -ms-flexbox; /* IE10 */
+        justify-content: center;
         flex-wrap: wrap;
-        -ms-flex-wrap: wrap; /* IE10 */
-        padding: 0 4px;
+        a {
+            display: block;
+            margin: 0 auto;
+            text-decoration: none;
+        }
     }
 
     .works-column {
-        position: relative;
-        flex: 100%;
-        max-width: 100%;
-        padding: 0 4px;
-
-        a {
-            display: block;
-        }
-        // .image-container {
-        //     display: block;
-        //     width: 100%;
-        //     height: auto;
-        // }
-
-        // .works-overlay {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     height: 100%;
-        //     background: $navy;
-        //     background: #1934467b; /* Black see-through */
-        //     color: $cream; 
-        //     width: 100%;
-        //     transition: .5s ease;
-        //     opacity:0;
-        //     color: $white;
-        //     text-align: center;
-        // }
-
-        // &:hover .works-overlay {
-        //     opacity: 1;
-        // }
+        margin: 1rem;       
     }
+}
 
+.works-overlay {
+    display: block;
+    width: 100%;
+
+    p {
+        color: $navy;
+        font-style: italic;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    .works-column {
-        flex: 50%;
-        max-width: 50%;
+    .works-row a{
+        width: 50%;
+    }
+    
+    // .works-column {
+    //     width: calc(50% - 2rem);
+    // }
+    
+}
+
+/************** works project pages **************/
+
+.project-text, .project-images {
+    padding: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .project-text, .project-images {
+        padding: 2.2rem;
     }
 }
 
-/****** works project pages *******/
 .head-image {
     
     &.hangman {
@@ -326,6 +341,23 @@ main {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+}
+
+.project-text {
+    ul {
+        padding-left: 1.5rem;
+    }
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+
+    .image-container {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0.25rem; 
+    }
 }
 
 /************** contact section **************/
