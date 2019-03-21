@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Unna:400i,700');
 
-/* Universal Styles */
+/*Color Variables*/
+$white: #fff;
+$cream: #f4e7d7;
+$pale-blue: #a1bbd0;
+$peach: #e2b49a;
+$grey: #878c8f;
+$navy: #193446;
+
+/************** Universal Styles **************/
 html {
     font-family: 'Source Sans Pro', Verdana, sans-serif;
     font-size: 16px;
@@ -9,6 +17,7 @@ html {
 body {
     width: 100%;
     min-width: 320px;
+    background-color: $cream;
 }
 
 ul {
@@ -18,36 +27,62 @@ ul {
 h1, h2, h3, h4 {
     font-family: 'Unna', serif;
     font-weight: 700;
+    margin: 0;
 }
+
 h1 {
-  font-size: 4.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.1;
   padding-bottom: 1.25rem;
 }
 
 h2 {
-  font-size: 6rem;
+  font-size: 2rem;
   line-height: 1.1;
   padding-bottom: 1rem;
+  color: $navy;
 }
 
 h3 {
     font-size: 1.5rem;
     line-height: 1.8;
     margin: 0;
+    color: $navy;
 }
 
 h4 {
     font-size: 1rem;
     margin: 0;
     font-style: italic;
+    color: $navy;
+}
+
+/* heading sizes for screens above 768px */
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 6rem;
+    }
+}
+
+
+.image-container {
+    overflow: hidden;
+  
+    img {
+        display: block;
+        max-width: 100%;
+    }
 }
 
 button {
   width: 30%;
   font-size: 0.75rem;
-  border: 1px solid #dddddd;
+  border: 1px solid $grey;
   color: black;
   padding: 0.75rem 0 0.75rem 0;
   text-align: center;
@@ -56,24 +91,16 @@ button {
 }
 
 button:hover {
-  background-color: #016fd1;
+  background-color: $pale-blue;
   color: white;
-  border: 1px solid #016fd1;
+  border: 1px solid $pale-blue;
   transition: all 750ms;
   -webkit-transition: all 750ms;
 }
 
-//Color Variables
-$white: #fff;
-$cream: #f4e7d7;
-$pale-blue: #a1bbd0;
-$peach: #e2b49a;
-$grey: #878c8f;
-$navy: #193446;
-
-/* Navigation menu */
+/************** Navigation menu **************/
 .navBar {
-    background-color: $white;
+    background-color: $cream;
     position: fixed;
     top: 0;
     z-index: 6;
@@ -88,7 +115,7 @@ $navy: #193446;
 
     .logo {
         display: flex;
-        padding: 0.375rem 0 0 1rem;
+        padding: 0.375rem 0 0 2.1875rem;
     }
     .logo a {
         display: block;
@@ -130,10 +157,25 @@ $navy: #193446;
     display: none;
 }
 
-/* Navigation menu */
+/* Navigation menu for screens up to 768px wide */
 @media screen and (max-width: 768px) {
     nav {
       ul {
+        background-color: $cream;
+        position: relative;
+        top: 2px;
+        list-style-type: none;
+        opacity: 0;
+        text-align: center;
+        transition: all 1s ease;
+        width: 100%;
+        padding: 0;
+        visibility: hidden;
+
+        &:last-child {
+            border-bottom: 2px solid $navy;
+          }
+
         a {
           color: $navy;
           
@@ -142,22 +184,6 @@ $navy: #193446;
           }
         }
       }
-    }
-    ul {
-      background-color: $cream;
-      position: relative;
-      top: 2px;
-      list-style-type: none;
-      opacity: 0;
-      text-align: center;
-      transition: all 1s ease;
-      width: 100%;
-      padding: 0;
-      visibility: hidden;
-    }
-    
-    ul:last-child {
-      border-bottom: 2px solid $navy;
     }
   
     #menu-toggle:checked ~ ul {
@@ -183,6 +209,8 @@ $navy: #193446;
     }
 }
 
+/************** main content **************/
+
 /* main tag styling to avoid hiding headings under nav menu */
 main {
     :target::before {
@@ -194,10 +222,16 @@ main {
 }
 
 #about, #work, #contact {
-    padding: 0 35px;
+    padding: 1.5rem;
 }
 
-// banner section
+@media only screen and (min-width: 768px) {
+    #about, #work, #contact {
+        padding: 2.2rem;
+    }
+}
+
+/************** banner section **************/
 #banner {
     height: 100vh;
     background: url("../images/amazing-animals-avian-1921336.jpg");
@@ -214,19 +248,69 @@ main {
     color: $white;
 }
 
-// about section
+/************** about section **************/
 #about {
     height: 100vh;
 }
 
+/************** work section **************/
 #work {
-    height: 100vh;
+
+    .works-row {
+        display: flex;
+        display: -ms-flexbox; /* IE10 */
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap; /* IE10 */
+        padding: 0 4px;
+    }
+
+    .works-column {
+        position: relative;
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+
+        // .image-container {
+        //     display: block;
+        //     width: 100%;
+        //     height: auto;
+        // }
+
+        // .works-overlay {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     background: $navy;
+        //     background: #1934467b; /* Black see-through */
+        //     color: $cream; 
+        //     width: 100%;
+        //     transition: .5s ease;
+        //     opacity:0;
+        //     color: $white;
+        //     text-align: center;
+        // }
+
+        // &:hover .works-overlay {
+        //     opacity: 1;
+        // }
+    }
+
 }
 
+@media only screen and (min-width: 768px) {
+    .works-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/************** contact section **************/
 #contact {
-    height: 100vh;
+    // height: 100vh;
 }
 
+/************** footer styling **************/
 footer {
     background-color: $navy;
     padding: 1rem 0;
@@ -247,7 +331,11 @@ footer {
         list-style-type: none;
     }
 
-    li a {
+    .social li a {
         color: $white;
+
+        &:hover {
+            color: $pale-blue;
+        }
     }
 }

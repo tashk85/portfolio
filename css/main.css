@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Unna:400i,700");
-/* Universal Styles */
+/*Color Variables*/
+/************** Universal Styles **************/
 html {
   font-family: "Source Sans Pro", Verdana, sans-serif;
   font-size: 16px;
@@ -8,6 +9,7 @@ html {
 body {
   width: 100%;
   min-width: 320px;
+  background-color: #f4e7d7;
 }
 
 ul {
@@ -17,37 +19,59 @@ ul {
 h1, h2, h3, h4 {
   font-family: "Unna", serif;
   font-weight: 700;
+  margin: 0;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.1;
   padding-bottom: 1.25rem;
 }
 
 h2 {
-  font-size: 6rem;
+  font-size: 2rem;
   line-height: 1.1;
   padding-bottom: 1rem;
+  color: #193446;
 }
 
 h3 {
   font-size: 1.5rem;
   line-height: 1.8;
   margin: 0;
+  color: #193446;
 }
 
 h4 {
   font-size: 1rem;
   margin: 0;
   font-style: italic;
+  color: #193446;
+}
+
+/* heading sizes for screens above 768px */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+}
+.image-container {
+  overflow: hidden;
+}
+.image-container img {
+  display: block;
+  max-width: 100%;
 }
 
 button {
   width: 30%;
   font-size: 0.75rem;
-  border: 1px solid #dddddd;
+  border: 1px solid #878c8f;
   color: black;
   padding: 0.75rem 0 0.75rem 0;
   text-align: center;
@@ -56,16 +80,16 @@ button {
 }
 
 button:hover {
-  background-color: #016fd1;
+  background-color: #a1bbd0;
   color: white;
-  border: 1px solid #016fd1;
+  border: 1px solid #a1bbd0;
   transition: all 750ms;
   -webkit-transition: all 750ms;
 }
 
-/* Navigation menu */
+/************** Navigation menu **************/
 .navBar {
-  background-color: #fff;
+  background-color: #f4e7d7;
   position: fixed;
   top: 0;
   z-index: 6;
@@ -79,7 +103,7 @@ button:hover {
 }
 .navBar .logo {
   display: flex;
-  padding: 0.375rem 0 0 1rem;
+  padding: 0.375rem 0 0 2.1875rem;
 }
 .navBar .logo a {
   display: block;
@@ -115,16 +139,9 @@ button:hover {
   display: none;
 }
 
-/* Navigation menu */
+/* Navigation menu for screens up to 768px wide */
 @media screen and (max-width: 768px) {
-  nav ul a {
-    color: #193446;
-  }
-  nav ul a:hover {
-    background-color: #a1bbd0;
-  }
-
-  ul {
+  nav ul {
     background-color: #f4e7d7;
     position: relative;
     top: 2px;
@@ -136,9 +153,14 @@ button:hover {
     padding: 0;
     visibility: hidden;
   }
-
-  ul:last-child {
+  nav ul:last-child {
     border-bottom: 2px solid #193446;
+  }
+  nav ul a {
+    color: #193446;
+  }
+  nav ul a:hover {
+    background-color: #a1bbd0;
   }
 
   #menu-toggle:checked ~ ul {
@@ -163,6 +185,7 @@ button:hover {
     flex-direction: column;
   }
 }
+/************** main content **************/
 /* main tag styling to avoid hiding headings under nav menu */
 main :target::before {
   content: "";
@@ -174,9 +197,15 @@ main :target::before {
 }
 
 #about, #work, #contact {
-  padding: 0 35px;
+  padding: 1.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+  #about, #work, #contact {
+    padding: 2.2rem;
+  }
+}
+/************** banner section **************/
 #banner {
   height: 100vh;
   background: url("../images/amazing-animals-avian-1921336.jpg");
@@ -193,18 +222,60 @@ main :target::before {
   color: #fff;
 }
 
+/************** about section **************/
 #about {
   height: 100vh;
 }
 
-#work {
-  height: 100vh;
+/************** work section **************/
+#work .works-row {
+  display: flex;
+  display: -ms-flexbox;
+  /* IE10 */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  padding: 0 4px;
+}
+#work .works-column {
+  position: relative;
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+#work .works-column .image-container {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#work .works-column .works-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #193446;
+  background: #1934467b;
+  /* Black see-through */
+  color: #f4e7d7;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: #fff;
+  text-align: center;
+}
+#work .works-column:hover .works-overlay {
+  opacity: 1;
 }
 
-#contact {
-  height: 100vh;
+@media only screen and (min-width: 768px) {
+  .works-column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
 }
-
+/************** contact section **************/
+/************** footer styling **************/
 footer {
   background-color: #193446;
   padding: 1rem 0;
@@ -222,8 +293,11 @@ footer ul li {
   padding: 0 1rem;
   list-style-type: none;
 }
-footer li a {
+footer .social li a {
   color: #fff;
+}
+footer .social li a:hover {
+  color: #a1bbd0;
 }
 
 /*# sourceMappingURL=main.css.map */
