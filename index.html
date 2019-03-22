@@ -13,7 +13,7 @@
 <body>
     <!-- Header section  -->
     <header>
-        <nav class="navBar" role="navigation">
+        <nav class="navBar">
             <nav class="wrapper">
                 <!-- Logo -->
                 <div class="logo">
@@ -26,7 +26,7 @@
                     <i class="fas fa-bars"></i>
                 </label>
                 <!-- Navigation Menu Links -->
-                <ul>
+                <ul role="navigation">
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -40,7 +40,7 @@
         <!-- Main banner section -->
         <section id="banner" role="banner">
             <div class="headline-text">
-                <h1>Hello, I'm Natasha.</h1>
+                <h1>Hello, I'm Natasha Khatri.</h1>
                 <p>A Junior Full-Stack Developer in Training, based in Sydney</p>
                 <div class="btn-main">
                     <a class="button" href="#contact">Contact Me</a>
@@ -55,15 +55,59 @@
             </div>
             <div class="about-intro">
                 <p>Lorem ipsum dolor sit amet, an quod natum scripserit per, cu hinc interesset cum. Duo illum persequeris ad, pro in ferri maiestatis, mei in illud scriptorem. Mea ad modus utroque apeirian, pri ad harum ubique.</p>
+                <ul class="social" role="presentation">
+                    <li><a href="https://www.linkedin.com/in/natasha-khatri-57562442" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/tashk85" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/tashk85" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://medium.com/@tashk85" target="_blank"><i class="fab fa-medium-m"></i></a></li>
+                </ul>
                 <div class="image-container">
                         <img src="" alt="" />
                 </div>
             </div>
             <div class="history-text">
-                <h3>Work History</h3>
-                <p>Para</p>
-                <h3>Study History</h3>
-                <p>Para</p>
+                <h3>Experience</h3>
+                <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Work History</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date">Oct 2014 - <br />Jan 2019</td>
+                                <td class="study-info"><span class="school">Jack's of Fiji</span> <br /> Creative Manager</td>
+                            </tr>
+                            <tr>
+                                <td class="date">May 2008 - <br />Apr 2014</td>
+                                <td class="study-info"><span class="school">Tailored Packaging</span> <br /> Graphic Designer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <h3>Education</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date of Study</th>
+                            <th>Education</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="date">2019</td>
+                            <td class="study-info"><span class="school">Coder Academy</span> <br /> Diploma, Information Technology</td>
+                        </tr>
+                        <tr>
+                            <td class="date">2012-2013</td>
+                            <td class="study-info"><span class="school">TAFE NSW</span> <br /> Certificate IV, Web Based Technologies (Design & Development)</td>
+                        </tr>
+                        <tr>
+                            <td class="date">2005-2007</td>
+                            <td class="study-info"><span class="school">Sydney Graphics College</span> <br /> Bachelor of Design (Graphic Design)</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
         
@@ -106,19 +150,10 @@
                 <h2>Contact</h2>
             </div>
             <div>
-                <h3>Say hi!</h3>
+                <h3>If you have any questions, please feel free to get in touch.</h3>
                 <div class="btn-main">
                     <a class="button" href="mailto:tashk85@gmail.com" target="_blank">Send Me An Email</a>
                 </div>
-            </div>
-            
-            <div>
-                <ul>
-                    <li>Connect with me on LinkedIn</li>
-                    <li>Check out my repos on Github</li>
-                    <li>Follow me on Twitter</li>
-                    <li>Read some blog posts on Medium</li>
-                </ul>
             </div>
         </section>
     </main>
@@ -131,7 +166,7 @@
             <li><a href="https://github.com/tashk85" target="_blank"><i class="fab fa-github"></i></a></li>
             <li><a href="https://twitter.com/tashk85" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://medium.com/@tashk85" target="_blank"><i class="fab fa-medium-m"></i></a></li>
-          </ul>
+        </ul>
     </footer>
 
 </body>
