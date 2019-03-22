@@ -42,7 +42,8 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  line-height: 1.8;
+  line-height: 1;
+  padding: 1rem 0;
   margin: 0;
   color: #3C2E3D;
 }
@@ -279,6 +280,9 @@ main :target::before {
   width: 100%;
   text-align: center;
 }
+.works-overlay h3 {
+  padding-bottom: 0.4rem;
+}
 .works-overlay p {
   color: #3C2E3D;
   font-style: italic;
@@ -319,19 +323,45 @@ main :target::before {
 }
 .project-text ul {
   padding-left: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .project-images {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: #ECC7C0;
 }
 .project-images .image-container {
-  flex: 100%;
-  max-width: 100%;
-  padding: 0.25rem;
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .project-text h2 {
+    font-size: 4rem;
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+  .text-container .text-left {
+    width: 60%;
+  }
+  .text-container .text-right {
+    width: 40%;
+  }
+
+  .project-images .image-container {
+    width: 48%;
+    justify-content: space-between;
+  }
+}
 /************** contact section **************/
 #contact {
   background-color: #8BCBC8;
