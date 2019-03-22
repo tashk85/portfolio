@@ -104,7 +104,7 @@ p {
     text-transform: uppercase;
     cursor: pointer;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: $cranberry;
         color: white;
         transition: all 0.75s ease-in-out 0s;
@@ -144,6 +144,7 @@ p {
 
     ul {
         margin: 0;
+        margin-right: 2.1875rem;
         margin-left: auto;
         list-style-type: none;
         display: flex;
@@ -160,8 +161,9 @@ p {
         text-decoration: none;
         transition: all .5s ease;
 
-        &:hover {
+        &:hover, &:focus {
             color: $melon;
+            text-decoration: underline;
         }
     }
 }
@@ -174,51 +176,43 @@ p {
     display: none;
 }
 
-/* Navigation menu for screens up to 768px wide */
+/* Navigation menu for screens below 768px wide */
 @media screen and (max-width: 768px) {
     nav {
-      ul {
-        background-color: $cream;
-        position: relative;
-        top: 2px;
-        list-style-type: none;
-        opacity: 0;
-        text-align: center;
-        transition: all 1s ease;
-        width: 100%;
-        padding: 0;
-        visibility: hidden;
+        ul {
+            background-color: $cream;
+            position: relative;
+            top: 2px;
+            list-style-type: none;
+            opacity: 0;
+            text-align: center;
+            transition: all 1s ease;
+            width: 100%;
+            padding: 0;
+            visibility: hidden;
 
-        &:last-child {
-            border-bottom: 2px solid $cranberry;
-          }
-
-        a {
-          color: $cranberry;
-          
-          &:hover {
-              background-color: $melon;
-          }
+            &:last-child {
+                border-bottom: 2px solid $cranberry;
+            }
         }
-      }
     }
   
     #menu-toggle:checked ~ ul {
-      opacity: 1;
-      height: 100%;
-      visibility: visible;
-      flex-direction: column;
+        opacity: 1;
+        height: 100%;
+        visibility: visible;
+        flex-direction: column;
     }
     
     .label-toggle {
-      cursor: pointer;
-      display: block;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 35px;
-      margin-top: 1em;
-      width: 35px;
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 35px;
+        margin-top: 1em;
+        width: 35px;
     }
     
     .wrapper {
@@ -327,6 +321,10 @@ main {
 @media only screen and (min-width: 700px) {
     .works-row a{
         width: 50%;
+
+        &:focus {
+            text-decoration: underline;
+        }
     }
     
     // .works-column {
@@ -419,6 +417,10 @@ main {
 /************** contact section **************/
 #contact {
     background-color: $bora-blue;
+
+    ul {
+        list-style-type: none;
+    }
 }
 
 /************** footer styling **************/
@@ -444,7 +446,7 @@ footer {
     .social li a {
         color: $white;
 
-        &:hover {
+        &:hover, &:focus {
             color: $melon;
             transition: all .5s ease;
         }
