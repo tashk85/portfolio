@@ -70,7 +70,7 @@ I have tried to follow the A11Y checklist, although I was confused with the resu
 
 ### DETAILS OF PLANNING PROCESS
 #### Project Plan & Timeline
-![Project Plan and Timeline document](./docs/project_plan_and_timeline.pdf)  
+![Project Plan and Timeline document](./docs/Project-Plan-and-Timeline_Portfolio.pdf)  
 
 #### Screenshots of Trello Board
 ![Kanban Board on Trello](./docs/trello-board.png)  
