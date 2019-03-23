@@ -6,7 +6,7 @@ By Natasha Khatri
 https://tashk85.github.io/
 
 ### GitHub Repository
-https://github.com/Jimfarrugia/ruby_hangman
+https://github.com/tashk85/portfolio
 
 ### Description
 
