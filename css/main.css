@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Italiana|Nanum+Gothic:400,700");
+@import url("https://fonts.googleapis.com/css?family=Italiana|Raleway:400,700");
 /*Color Variables*/
 /************** Universal Styles **************/
 html {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -58,6 +58,8 @@ h4 {
 
 p {
   margin: 0;
+  padding-bottom: 1rem;
+  line-height: 1.5;
 }
 
 /* heading sizes for screens above 768px */
@@ -207,6 +209,7 @@ p {
   /* padding to avoid hiding headings under nav menu */
 }
 
+/* section styling on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
   #about, #work, #contact {
     padding: 2.2rem;
@@ -233,6 +236,7 @@ p {
   padding-bottom: 1rem;
 }
 
+/* banner styles on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
   #banner {
     padding: 2.2rem;
@@ -245,6 +249,18 @@ p {
 }
 #about h3 {
   padding-top: 2rem;
+}
+
+.about-intro a {
+  color: #3C2E3D;
+  text-decoration: none;
+  font-weight: 700;
+}
+.about-intro a:hover {
+  text-decoration: underline;
+}
+.about-intro .image-container {
+  width: 50%;
 }
 
 .history-text table {
@@ -272,6 +288,26 @@ p {
   text-transform: uppercase;
 }
 
+/* about styles on screens more than 800px wide */
+@media only screen and (min-width: 800px) {
+  #about h3 {
+    padding-top: 0;
+  }
+
+  .about-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-intro {
+    width: 45%;
+  }
+
+  .history-text {
+    width: 50%;
+  }
+}
 /************** work section **************/
 #work {
   background-color: #ECC7C0;
@@ -292,7 +328,23 @@ p {
   text-decoration: none;
 }
 #work .works-column {
-  margin: 1rem;
+  padding: 1rem;
+  transition: all 0.75s ease-in-out 0s;
+  -webkit-transition: all 0.75s ease-in-out 0s;
+  color: #000;
+}
+#work .works-column:hover {
+  cursor: pointer;
+  background-color: #F4E7D7;
+  transition: all 0.75s ease-in-out 0s;
+  -webkit-transition: all 0.75s ease-in-out 0s;
+  color: #000;
+  text-decoration: underline;
+}
+#work .works-column:hover .image-container {
+  filter: grayscale(100%);
+  transition: all 0.75s ease-in-out 0s;
+  -webkit-transition: all 0.75s ease-in-out 0s;
 }
 
 .works-overlay {
@@ -301,6 +353,8 @@ p {
   text-align: center;
 }
 .works-overlay h3 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
   padding-bottom: 0.4rem;
 }
 .works-overlay p {
@@ -308,6 +362,7 @@ p {
   font-style: italic;
 }
 
+/* work styles on screens more than 700px wide */
 @media only screen and (min-width: 700px) {
   .works-row a {
     width: 50%;
@@ -317,34 +372,18 @@ p {
   }
 }
 /************** works project pages **************/
-.hangman-main {
-  margin-top: 50px;
-}
-
 .project-text, .project-images {
   padding: 1.5rem;
   border-radius: 15px;
   margin: 1rem;
 }
 
+/* project padding on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
   .project-text, .project-images {
     padding: 2.2rem;
   }
 }
-.head-image {
-  height: 20rem;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-.head-image.hangman {
-  background: url("../images/hangman_terminal_app_feat.png");
-}
-.head-image.css_zen {
-  background: url("../images/css_zen_home_feat.png");
-}
-
 .project-text {
   background-color: #DAE9E4;
 }
@@ -367,9 +406,13 @@ p {
   padding: 0.75rem 0;
 }
 
+/* project styles on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
   .project-text h2 {
     font-size: 4rem;
+  }
+  .project-text h3 {
+    padding-top: 0;
   }
 
   .text-container {
@@ -378,10 +421,10 @@ p {
     padding-top: 1.5rem;
   }
   .text-container .text-left {
-    width: 60%;
+    width: 55%;
   }
   .text-container .text-right {
-    width: 40%;
+    width: 35%;
   }
 
   .project-images .image-container {

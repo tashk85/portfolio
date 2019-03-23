@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Italiana|Nanum+Gothic:400,700');
+@import url('https://fonts.googleapis.com/css?family=Italiana|Raleway:400,700');
 
 /*Color Variables*/
 $white: #F8F8F5;
@@ -11,7 +11,7 @@ $cranberry: #3C2E3D;
 
 /************** Universal Styles **************/
 html {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
   }
@@ -67,6 +67,8 @@ h4 {
 
 p {
     margin: 0;
+    padding-bottom: 1rem;
+    line-height: 1.5;
 }
 
 /* heading sizes for screens above 768px */
@@ -234,6 +236,7 @@ p {
     }
 }
 
+/* section styling on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
     #about, #work, #contact {
         padding: 2.2rem;
@@ -262,6 +265,7 @@ p {
     }
 }
 
+/* banner styles on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
     #banner {
         padding: 2.2rem;
@@ -275,6 +279,23 @@ p {
 
     h3 {
         padding-top: 2rem;
+    }
+}
+
+.about-intro {
+    
+    a {
+        color: $cranberry;
+        text-decoration: none;
+        font-weight: 700;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .image-container {
+        width: 50%;
     }
 }
 
@@ -311,6 +332,30 @@ p {
     }
 }
 
+/* about styles on screens more than 800px wide */
+@media only screen and (min-width: 800px) {
+    #about {
+        h3 {
+            padding-top: 0;
+        }
+    }
+    
+    .about-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about-intro {
+        width: 45%;
+    }
+
+    .history-text {
+        width: 50%;
+    }
+}
+
+
 /************** work section **************/
 #work {
     background-color: $sakura;
@@ -332,7 +377,25 @@ p {
     }
 
     .works-column {
-        margin: 1rem;       
+        padding: 1rem;
+        transition: all 0.75s ease-in-out 0s;
+        -webkit-transition: all 0.75s ease-in-out 0s;
+        color: #000;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $cream;
+            transition: all 0.75s ease-in-out 0s;
+            -webkit-transition: all 0.75s ease-in-out 0s;
+            color: #000;
+            text-decoration: underline;
+        }
+
+        &:hover .image-container {
+            filter: grayscale(100%);
+            transition: all 0.75s ease-in-out 0s;
+            -webkit-transition: all 0.75s ease-in-out 0s;
+        }
     }
 }
 
@@ -342,6 +405,8 @@ p {
     text-align: center;
 
     h3 {
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
         padding-bottom: 0.4rem;
     }
     
@@ -351,6 +416,7 @@ p {
     }
 }
 
+/* work styles on screens more than 700px wide */
 @media only screen and (min-width: 700px) {
     .works-row a{
         width: 50%;
@@ -359,18 +425,9 @@ p {
             text-decoration: underline;
         }
     }
-    
-    // .works-column {
-    //     width: calc(50% - 2rem);
-    // }
-    
 }
 
 /************** works project pages **************/
-
-.hangman-main {
-    margin-top: 50px;
-}
 
 .project-text, .project-images {
     padding: 1.5rem;
@@ -378,26 +435,11 @@ p {
     margin: 1rem;
 }
 
+/* project padding on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
     .project-text, .project-images {
         padding: 2.2rem;
     }
-}
-
-.head-image {
-    
-    &.hangman {
-        background: url("../images/hangman_terminal_app_feat.png");
-    }
-
-    &.css_zen {
-        background: url("../images/css_zen_home_feat.png");
-    }
-    
-    height: 20rem;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
 }
 
 .project-text {
@@ -424,10 +466,15 @@ p {
     }
 }
 
+/* project styles on screens more than 768px wide */
 @media only screen and (min-width: 768px) {
     .project-text {
         h2 {
             font-size: 4rem;
+        }
+
+        h3 {
+            padding-top: 0;
         }
     }
     .text-container {
@@ -436,11 +483,11 @@ p {
         padding-top: 1.5rem;
 
         .text-left {
-            width: 60%;
+            width: 55%;
         }
 
         .text-right {
-            width: 40%;
+            width: 35%;
         }
     }
     .project-images {
