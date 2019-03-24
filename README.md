@@ -49,6 +49,7 @@ Github Pages
 #### Design Process
 ![Moodboard on Pinterest](./docs/Pinterest-moodboard.png)  
 ![Final colour palette](./docs/colour-palette.png) 
+![Features I liked on example websites](./docs/design-ideas-features.jpg) 
 ![Initial wireframe sketches](./docs/design-ideas-wireframes1.jpg) 
 ![Initial wireframe sketches](./docs/design-ideas-wireframes2.jpg) 
 ![Final wireframe sketches](./docs/design-ideas-wireframes3.jpg) 
@@ -70,10 +71,23 @@ I have tried to follow the A11Y checklist, although I was confused with the resu
 
 ### DETAILS OF PLANNING PROCESS
 #### Project Plan & Timeline
-![Project Plan and Timeline document](./docs/Project-Plan-and-Timeline_Portfolio.pdf)  
+[Project Plan and Timeline document](./docs/Project-Plan-and-Timeline_Portfolio.pdf)  
 
 #### Screenshots of Trello Board
-![Kanban Board on Trello](./docs/trello-board.png)  
+[Kanban Board on Trello](./docs/trello-board.png)  
 
 ### SHORT ANSWER Q&A
 
+1. Key events in the development of the Internet include:
+   - The emergence of TCP/IP as the standard protocol for the Internet in 1983. This is the technology that defined how to transport data from one point to another across networks of computers, which is still in use today.
+   - In 1982, the Domain Name System introduced domain names, which are automatically assigned an IP address. This made it easier for users to remember addresses in comparison to the use of IP numbers only.
+   - In the 1990s, Tim Berners-Lee created the World Wide Web through his idea of sharing information freely through hyperlinks, he also created Hypertext Markup Language (HTML), the language used to program and create web pages, and the Uniform Resource Identifier (URI), which is the unique address for every web page.
+   - In 1993, Mosaic the first web browser was released, causing a rapid growth of the World Wide Web and public interest in building web pages.
+
+
+2. When a web user surfs the Internet there are a series of features that enable a web page to appear on their web browser. The web browser is a software program that allows users to find, access and view web pages on their computer. When the domain name, which is the address for a web page, is entered into the web browser it uses the Domain Name Server to find the linked IP address and web server before it retrieves the data to load on the browser. The web server is where the web pages, sites or apps are stored, when the user requests to view a particular web page it is downloaded as a copy from the server to be displayed on their browser.
+
+
+3. When the Mosaic graphical browser was developed in 1993, it significantly accelerated use of the Web due to the interface that allowed users to point-and-click on elements to select a menu or fill in a search form to find information. 
+As the web browser was further developed and the interface was made more user friendly, it was a major contributor to the increase of web users. By 1998 there were almost 30 million host computers connected to the Internet and more than 58 million people using the Internet. Today while the original Netscape browser was discontinued, there are several browsers available including Chrome or Firefox, which is based on the source code for Netscape.
+The web browser could also be said to have contributed to the rise in online shopping, social networks and web applications that have changed how people work, shop and communicate in the world today.
