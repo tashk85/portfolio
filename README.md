@@ -47,16 +47,26 @@ Github Pages
 
 ### DESIGN DOCUMENTATION
 #### Design Process
+Moodboard on Pinterest
 ![Moodboard on Pinterest](./docs/Pinterest-moodboard.png)  
+
+Final colour palette
 ![Final colour palette](./docs/colour-palette.png) 
+
+Features I liked on example websites
 ![Features I liked on example websites](./docs/design-ideas-features.jpg) 
+
+Initial wireframe sketches
 ![Initial wireframe sketches](./docs/design-ideas-wireframes1.jpg) 
 ![Initial wireframe sketches](./docs/design-ideas-wireframes2.jpg) 
 ![Final wireframe sketches](./docs/design-ideas-wireframes3.jpg) 
 ![Final wireframe sketches](./docs/design-ideas-wireframes4.jpg) 
 
 #### Wireframes
+Wireframes for mobile screen
 ![Wireframes for mobile screen](./docs/mobile-wireframes.png) 
+
+Wireframes for screens larger than 768px
 ![Wireframes for screens larger than 768px - landing and about sections](./docs/desktop-wireframes1.png)
 ![Wireframes for screens larger than 768px - work and contact sections](./docs/desktop-wireframes2.png)
 ![Wireframes for screens larger than 768px - project page](./docs/desktop-wireframes3.png)
@@ -74,7 +84,7 @@ I have tried to follow the A11Y checklist, although I was confused with the resu
 [Project Plan and Timeline document](./docs/Project-Plan-and-Timeline_Portfolio.pdf)  
 
 #### Screenshots of Trello Board
-[Kanban Board on Trello](./docs/trello-board.png)  
+![Kanban Board on Trello](./docs/trello-board.png)  
 
 ### SHORT ANSWER Q&A
 
